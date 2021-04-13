@@ -52,8 +52,9 @@
               $order_id = str_replace("order_id=", "", $_SERVER['QUERY_STRING']);
 
               $statement -> execute(['order_id' => (int)($order_id)]);
-   
+              $total = 0;
               foreach ($statement as $row) {
+                $total += (int)($row['price'] * $row['amount']);
                 echo '
                   <tr>
                     <td>' . $row['amount'] . '</td>
@@ -62,21 +63,35 @@
                   </tr>
                 ';
               }
+
+              echo '
+                <tr>
+                  <td></td>
+                  <td class="right-align">Tax</td>
+                  <td class="right-align">
+                    $<?php total?>
+                  </td>
+                </tr>
+              ';
               // print_r($foodItems);
             } catch(Exception $e) {
               print_r($e);
             }
             
           ?>
-          <tr>
+          <!-- <tr>
             <td></td>
             <td class="right-align">Tax</td>
-            <td class="right-align">$0.50</td>
-          </tr>
+            <td class="right-align">
+              $<?php ?>
+            </td>
+          </tr> -->
           <tr>
             <td></td>
             <td class="right-align bold">Total</td>
-            <td class="right-align bold">$6.75</td>
+            <td class="right-align bold">
+              $<?php ?>
+            </td>
           </tr>
         </tbody>
       </table>
