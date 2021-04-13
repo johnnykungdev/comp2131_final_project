@@ -63,36 +63,32 @@
                   </tr>
                 ';
               }
-
+              $tax = $total * 0.05;
               echo '
                 <tr>
                   <td></td>
                   <td class="right-align">Tax</td>
                   <td class="right-align">
-                    '. $total . '
+                    '. $tax . '
                   </td>
                 </tr>
               ';
+
+              echo '
+              <tr>
+                <td></td>
+                <td class="right-align">Tax</td>
+                <td class="right-align">
+                  '. $tax + $total . '
+                </td>
+              </tr>
+            ';
               // print_r($foodItems);
             } catch(Exception $e) {
               print_r($e);
             }
             
           ?>
-          <!-- <tr>
-            <td></td>
-            <td class="right-align">Tax</td>
-            <td class="right-align">
-              $<?php ?>
-            </td>
-          </tr> -->
-          <tr>
-            <td></td>
-            <td class="right-align bold">Total</td>
-            <td class="right-align bold">
-              $<?php ?>
-            </td>
-          </tr>
         </tbody>
       </table>
     </div>
