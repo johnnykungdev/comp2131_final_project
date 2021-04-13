@@ -1,8 +1,8 @@
 <?php 
-    define('DBHOST', 'localhost');
-    define('DBNAME', 'crazyKitchen');
-    define('DBUSER', 'root');
-    define('DBPASS', '');
+    define('DBHOST', 'us-cdbr-east-03.cleardb.com');
+    define('DBNAME', 'heroku_4f6ac3312be5f4b');
+    define('DBUSER', 'bff7ef5d530b6c');
+    define('DBPASS', 'd4e68e33');
     
     $link = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
 
