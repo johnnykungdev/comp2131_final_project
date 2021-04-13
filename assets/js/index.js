@@ -56,6 +56,7 @@ $(document).ready(function() {
                     price
                 }]))
             }
+            showBar(name, amount)
             $(this).prev().children().children('select').val(1)
             /** 
              * store order in localStorage using JSON
