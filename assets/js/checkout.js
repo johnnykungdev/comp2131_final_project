@@ -44,7 +44,7 @@ $(document).ready(function() {
       <tr>
         <td></td>
         <td class="right-align">Total</td>
-        <td class="right-align">$${totalPrice}</td>
+        <td class="right-align">$${totalPrice + tax}</td>
       </tr>
     `)
   }

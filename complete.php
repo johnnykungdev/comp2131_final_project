@@ -69,7 +69,7 @@
                   <td></td>
                   <td class="right-align">Tax</td>
                   <td class="right-align">
-                    '. $tax . '
+                    $'. $tax . '
                   </td>
                 </tr>
               ';
@@ -79,7 +79,7 @@
                 <td></td>
                 <td class="right-align">Tax</td>
                 <td class="right-align">
-                  '. $tax + $total . '
+                  $'. $tax + $total . '
                 </td>
               </tr>
             ';
