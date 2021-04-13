@@ -69,7 +69,7 @@
                   <td></td>
                   <td class="right-align">Tax</td>
                   <td class="right-align">
-                    $<?php total?>
+                    '. $total . '
                   </td>
                 </tr>
               ';
