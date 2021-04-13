@@ -28,11 +28,9 @@ $(document).ready(function() {
         $(this).click(function(e) {
             const id = e.target.id
             const name = $(this).parent().prev().html()
-            console.log("name", name)
+
             const amount = Number($(this).prev().children().children('select').val())
-            console.log("amount", amount)
             const price = $(this).prev().prev().attr('id')
-            console.log("price", price)
             if (localStorage.getItem('crazyKitchen')) {
                 const currentItems = JSON.parse(localStorage.getItem('crazyKitchen'))
 
@@ -58,7 +56,6 @@ $(document).ready(function() {
                     price
                 }]))
             }
-            console.log(localStorage.getItem('crazyKitchen'))
             $(this).prev().children().children('select').val(1)
             /** 
              * store order in localStorage using JSON

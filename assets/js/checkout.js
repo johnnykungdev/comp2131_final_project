@@ -27,12 +27,10 @@ $(document).ready(function() {
     })
   
     const totalPrice  = currentItems.reduce(function(accu, item) {
-      console.log(accu, item)
       return accu + Number(item.price * item.amount)
     }, 0)
   
     const tax = totalPrice * 0.05
-    console.log(totalPrice, tax)
   
     $('tbody').append(`
       <tr>
@@ -65,7 +63,6 @@ $(document).ready(function() {
       card_number: $('#card-number').val(),
       foodItems: currentItems
     }
-    console.log(orderInformation)
 
     if (!orderInformation.name) {
       showWarningBar('Please enter your name.')
@@ -79,7 +76,6 @@ $(document).ready(function() {
         url: "/postOrder.php",
         data: orderInformation,
         success: function(data) {
-          console.log(data) //order_id
           
           if (parseInt(data)) {
             localStorage.removeItem('crazyKitchen')
@@ -87,7 +83,7 @@ $(document).ready(function() {
           }
         },
         error: function(error) {
-          console.log("error", error)
+          showWarningBar(error)
         }
       })
     }
