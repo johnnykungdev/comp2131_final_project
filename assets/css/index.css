@@ -1,0 +1,247 @@
+
+h1 {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 300;
+  margin-top: 0;
+}
+.control-group {
+  display: inline-block;
+  vertical-align: top;
+  background: #fff;
+  text-align: left;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  padding: 30px;
+  width: 200px;
+  height: 210px;
+  margin: 10px;
+}
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control__indicator {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background: #fff;
+  border: 1px solid #ccc;
+/*
+  .control:hover input:not([disabled]):checked ~ &,
+  .control input:checked:focus ~ &
+    border-color: #666
+    */
+}
+.control--checkbox .control__indicator {
+  border-radius: 3px;
+}
+.control--radio .control__indicator {
+  border-radius: 50%;
+}
+.control:hover input:not([disabled]) ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  border-color: #666;
+}
+.control input:checked ~ .control__indicator {
+  background: #fff;
+}
+.control input:disabled ~ .control__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+.control--checkbox .control__indicator:after {
+  left: 5px;
+  top: 0px;
+  width: 5px;
+  height: 12px;
+  border: solid #34bb92;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: #7b7b7b;
+}
+.control--radio .control__indicator:after {
+  left: 5px;
+  top: 5px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #34bb92;
+}
+.control--radio input:disabled ~ .control__indicator:after {
+  background: #7b7b7b;
+}
+.select {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.select select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  background: #e6e6e6;
+  color: #7b7b7b;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.select select::-ms-expand {
+  display: none;
+}
+.select select:hover,
+.select select:focus {
+  color: #000;
+  background: #ccc;
+}
+.select select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.select__arrow {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: #7b7b7b transparent transparent transparent;
+}
+.select select:hover ~ .select__arrow,
+.select select:focus ~ .select__arrow {
+  border-top-color: #000;
+}
+.select select:disabled ~ .select__arrow {
+  border-top-color: #ccc;
+}
+
+.food-thumbnail {
+  max-height: 300px;
+}
+
+.food-thumbnail img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.food-name {
+  font-size: 26px;
+  text-decoration: underline;
+}
+
+.food-price {
+  font-size: 20px;
+}
+
+.add-food {
+  width: 100%;
+  background-color: #34bb92;
+  border: none;
+  font-size: 20px;
+  padding: 5px 0;
+  color: white;
+  
+}
+
+.add-food:hover{
+    background-color: rgb(7, 83, 48);
+}
+
+#toCheckout {
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+#logo {
+    width: 40%;
+    height: auto;
+}
+
+#foodImages {
+    width: 100%;
+    height: 300px;
+}
+
+.notification-bar {
+    position: fixed;
+    top: 15px;
+    padding: 15px 0;
+    background-color: rgba(255, 0, 255, 0.925);
+    color: white;
+    width: 90%;
+    left: 5%;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 22px;
+
+}
+
+.notification-bar1 {
+    position: fixed;
+    top: 15px;
+    padding: 15px 0;
+    background-color: rgba(255, 0, 0, 0.925);
+    color: white;
+    width: 90%;
+    left: 5%;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 22px;
+}
+
+.merchant {
+  text-align: center;
+}
+
+html, body {
+    width: 100%;
+    height:100%;
+  }
+  
+  body {
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
