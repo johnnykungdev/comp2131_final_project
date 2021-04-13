@@ -101,43 +101,5 @@
     </div>
   </div>
 
-</div>
-<!-- partial -->
-        <button class="col s12 btn-large blue btn waves-effect waves-dark register" id="backToIndex"><span>Back To Home Page</span> <i class="fa fa-check"></i></button>
-      </a>
-    </div>
-  </div>
-
-</div>
-<!-- partial -->
-        <button class="col s12 btn-large blue btn waves-effect waves-dark register" id="backToIndex"><span>Back To Home Page</span> <i class="fa fa-check"></i></button>
-      </a>
-    </div>
-  </div>
-
-</div>
-<!-- partial -->
-        <button class="col s12 btn-large blue btn waves-effect waves-dark register" id="backToIndex"><span>Back To Home Page</span> <i class="fa fa-check"></i></button>
-      </a>
-    </div>
-  </div>
-
-</div>
-<!-- partial -->
-        <button class="col s12 btn-large blue btn waves-effect waves-dark register" id="backToIndex"><span>Back To Home Page</span> <i class="fa fa-check"></i></button>
-      </a>
-    </div>
-  </div>
-
-</div>
-<!-- partial -->
-        <button class="col s12 btn-large blue btn waves-effect waves-dark register" id="backToIndex"><span>Back To Home Page</span> <i class="fa fa-check"></i></button>
-      </a>
-    </div>
-  </div>
-
-</div>
-<!-- partial -->
-
 </body>
 </html>
